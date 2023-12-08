@@ -27,15 +27,17 @@ socket.on('receiveMessage', (data) => {
 // 메시지 전송 버튼 클릭 시 호출되는 함수
 const sendMessageButton = document.getElementById('sendMessageButton');
 sendMessageButton.addEventListener('click', () => {
+  const userName = "윤도운"
   const messageInput = document.getElementById('messageInput');
   const message = messageInput.value;
 
   // 유저 이름과 메시지가 입력되었는지 확인합니다.
   if (message) {
     // 서버로 메시지를 전송합니다.
-    socket.emit('sendMessage', { userName: "윤도운", message });
+    socket.emit('sendMessage', { userName, message });
     messageInput.value = ''; // 입력 필드 초기화
   } else {
+
     alert('이름과 메시지를 모두 입력하세요.');
   }
 });

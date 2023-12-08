@@ -32,7 +32,8 @@ document.getElementById("post").addEventListener("click", function (event) {
   console.log(name);
   console.log(score);
 
-  var currentContent = "내가 보낸 메시지: " + name + "\t" + score + "</br>";
+
+  //  ;
 
   const requestBody = JSON.stringify({ name, score });
 
@@ -50,7 +51,8 @@ document.getElementById("post").addEventListener("click", function (event) {
     .then(data => {
       console.log(data)
       const resultElement = document.getElementById("message");
-      newContent = `서버로부터 받은 메시지: ${data}`;
+      let currentContent = message.innerHTML;
+      newContent = `내가 보낸 메시지: ${name} \t  ${score} </br> 서버로부터 받은 메시지: ${data} <br>`;
       resultElement.innerHTML = currentContent + newContent;
     })
     .catch(error => {
@@ -79,7 +81,8 @@ document.getElementById("get").addEventListener("click", function () {
     .then(data => {
       console.log(data);
       const resultElement = document.getElementById("message");
-      resultElement.innerHTML = `서버로부터 받은 메시지: ${data}`;
+      let currentContent = message.innerHTML;
+      resultElement.innerHTML = currentContent + `서버로부터 받은 메시지: ${data} <br>`;
     })
     .catch(error => {
       console.error(error);
