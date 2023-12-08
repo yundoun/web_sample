@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>api과제</title>
+  </head>
+  <body>
+    <div id="app">
+      <!-- 과제는 여기서 부터 -->
+      <h3>성적 관리 시스템 API</h3>
+
+      <!-- 첫 번째 input 태그 -->
+      <label for="name">이름:</label>
+      <input type="text" id="name" />
+
+      <input type="text" id="score" />
+
+      <!-- 첫 번째 버튼 -->
+      <button type="button" id="post">post</button><br /><br />
+
+      <!--==============================================================-->
+
+      <label for="input1">get</label>&nbsp;&nbsp;
+      <!-- 두 번째 버튼 -->
+      <button type="button" id="get">get</button><br /><br />
+
+      <!-- 페이지 박스 -->
+      <div id="message">
+        <!-- 페이지 내용을 이곳에 표시할 수 있습니다. -->
+      </div>
+
+      <script>
+        // 버튼 클릭 이벤트 핸들러
+        document.getElementById("post").addEventListener("click", function () {
+          // 입력 필드의 값을 가져옴
+          var nameInput = document.getElementById("name").value;
+          var scoreInput = document.getElementById("score").value;
+
+          // 출력할 div 태그 참조
+          var messageDiv = document.getElementById("message");
+
+          // 입력된 내용을 기존 내용 뒤에 추가
+          var currentContent = messageDiv.innerHTML;
+          var newContent =
+            "이름: " + nameInput + "<br>점수: " + scoreInput + "<br><br>";
+          messageDiv.innerHTML = currentContent + newContent;
+
+          // 입력 필드 초기화
+          document.getElementById("name").value = "";
+          document.getElementById("score").value = "";
+        });
+      </script>
+    </div>
+    <script src="api.js"></script>
+  </body>
+</html>
