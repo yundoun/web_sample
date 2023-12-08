@@ -1,16 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>채팅과제</title>
-</head>
-<body>
-  
-  <div id="app">
-    <!-- 과제는 여기서 부터 -->
-  </div>
-  <script  src="chat.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>채팅과제</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
+  </head>
+  <body>
+    <h1>채팅 프로그램</h1>
+    <h3 id="date">날짜 작성</h3>
+
+    <div id="message"></div>
+
+    <div id="userCount">유저 수: 0</div>
+    <div id="chat">
+      <div id="messages"></div>
+      <input type="text" id="messageInput" placeholder="메시지 입력" />
+      <button id="sendMessageButton">전송</button>
+    </div>
+
+    <script src="chat.js"></script>
+  </body>
 </html>
