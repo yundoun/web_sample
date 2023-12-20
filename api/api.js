@@ -1,33 +1,4 @@
-// // 로컬 스토리지에서 메시지 로드하는 함수
-// function loadMessages() {
-//   // 'apiMessages'라는 키로 저장된 메시지를 로컬 스토리지에서 불러옴
-//   const storedMessages = localStorage.getItem('apiMessages');
-//   // 저장된 메시지가 있으면 JSON 형태로 파싱, 없으면 빈 배열 반환
-//   return storedMessages ? JSON.parse(storedMessages) : [];
-// }
 
-// // 로컬 스토리지에 메시지 저장하는 함수
-// function saveMessage(newMessage) {
-//   // 기존에 저장된 메시지 불러옴
-//   const messages = loadMessages();
-//   // 새 메시지를 메시지 배열에 추가
-//   messages.push(newMessage);
-//   // 수정된 메시지 배열을 'apiMessages'라는 키로 로컬 스토리지에 저장
-//   localStorage.setItem('apiMessages', JSON.stringify(messages));
-// }
-
-// // 페이지 로딩 시 저장된 메시지 표시
-// document.addEventListener('DOMContentLoaded', () => {
-//   // 저장된 메시지 불러옴
-//   const messages = loadMessages();
-//   // 결과를 표시할 HTML 요소 찾기
-//   const resultElement = document.getElementById("message");
-
-//   // 각 메시지에 대해 HTML 요소에 추가
-//   messages.forEach(message => {
-//     resultElement.innerHTML += `서버로부터 받은 메시지: ${message} <br>`;
-//   });
-// });
 
 // POST API 요청 처리
 document.getElementById("post").addEventListener("click", function (event) {
@@ -52,8 +23,6 @@ document.getElementById("post").addEventListener("click", function (event) {
     .then(data => {
       // 서버 응답을 문자열로 변환
       const message = `POST 응답: ${JSON.stringify(data)}`;
-      // // 로컬 스토리지에 메시지 저장
-      // saveMessage(message);
 
       // 결과를 화면에 표시
       const resultElement = document.getElementById("message");
@@ -82,8 +51,6 @@ document.getElementById("get").addEventListener("click", function () {
     .then(data => {
       // 서버 응답을 문자열로 변환
       const message = `GET 응답: ${JSON.stringify(data)}`;
-      // // 로컬 스토리지에 메시지 저장
-      // saveMessage(message);
 
       // 결과를 화면에 표시
       const resultElement = document.getElementById("message");

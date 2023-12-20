@@ -9,14 +9,16 @@
   </head>
   <body>
     <h1>채팅 프로그램</h1>
-    <h3 id="date">날짜 작성</h3>
+    <h4>http://113.198.233.57:3001/c0e31</h4>
+    <input id="name" placeholder="이름" />
+    <input id="number" placeholder="학번" />
+    <input id="chat" placeholder="채팅을 입력하세요" />
+    <button id="addButton">등록</button>
 
-    <div id="message"></div>
-
-    <div id="userCount">유저 수: 0</div>
+    <h4>http://113.198.233.57:3001/c0e31/chat?index={number}</h4>
     <div id="chat">
-      <input type="text" id="messageInput" placeholder="메시지 입력" />
-      <button id="sendMessageButton">전송</button>
+      <input id="postNumber" placeholder="숫자 1~100 입력" />
+      <button id="getButton">get</button>
       <div id="messages"></div>
     </div>
 
