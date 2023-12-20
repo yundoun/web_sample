@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Type 1</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
+  </head>
+  <body>
+    <h1>Type 1</h1>
+    <h4>수정하기</h4>
+    <label>http://113.198.234.56:3001/bfa4/record</label>
+    <input id="name" placeholder="이름" />
+    <input id="score" placeholder="성적" />
+    <button id="postKor">한국어</button>
+    <button id="postEng">영어</button>
+
+    <h4>가져오기</h4>
+    <label>http://113.198.234.56:3001/bfa4/record?type="kro"</label>
+    <button id="getKor">한국어</button>
+    <br />
+    <label>http://113.198.234.56:3001/api/bfa4/record?type="eng"</label>
+    <button id="getEng">영어</button>
+
+    <div id="chatBox"></div>
+
+    <script src="type1.js"></script>
+  </body>
+</html>
