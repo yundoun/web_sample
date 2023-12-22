@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>웹프 기말고사</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
+  </head>
+  <body>
+    <h1>문제풀이</h1>
+    <label>이름 :</label>
+    <input id="name" placeholder="이름" />
+    <button id="regBtn">등록</button>
+    <br />
+
+    <button id="questRequest">문제요청</button>
+    <input id="quest" />
+    <br />
+    <button id="answerPost">정답전송</button>
+    <input id="answer" />
+    <br />
+    <br />
+    <button id="resultBtn">결과</button>
+    <br />
+    <label>맞는개수 :</label>
+    <input id="o" />
+    <br />
+    <label>틀린개수 :</label>
+    <input id="x" />
+
+    <br />
+    <br />
+
+    <div id="chatBox"></div>
+
+    <script src="test.js"></script>
+  </body>
+</html>
